@@ -1,0 +1,404 @@
+/* ==========================================================================
+   The Resurgence — NUESA Inauguration
+   Design system drawn from the official flyer palette:
+   warm ivory/cream ground, champagne-gold accents, taupe blackletter,
+   and deep charcoal (the president-elect's satin lapel).
+   ========================================================================== */
+
+:root {
+  /* Surfaces */
+  --cream: #fbf7ec;
+  --cream-2: #f6efdd;
+  --cream-3: #f0e5c9;
+  --paper: #ffffff;
+
+  /* Golds */
+  --gold-soft: #f0e3c4;
+  --gold: #d9ba8c;
+  --gold-deep: #c0a06c;
+  --gold-ink: #a9853f;
+
+  /* Neutrals pulled from the flyer */
+  --taupe: #8c7b63;
+  --taupe-soft: #a99a83;
+  --ink: #17150f;
+  --ink-2: #2a2620;
+  --body: #4d473c;
+  --muted: #7a7263;
+  --line: #e6dcc4;
+
+  /* Type */
+  --font-blackletter: "UnifrakturMaguntia", "Cormorant Garamond", serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Montserrat", "Segoe UI", -apple-system, sans-serif;
+
+  --shadow-soft: 0 10px 40px rgba(23, 21, 15, 0.08);
+  --shadow-lift: 0 24px 60px rgba(23, 21, 15, 0.14);
+  --radius: 18px;
+  --maxw: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--body);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+  position: relative;
+}
+
+.section--tight {
+  padding: 64px 0;
+}
+
+.section--alt {
+  background: linear-gradient(180deg, var(--cream-2), var(--cream));
+}
+
+.section--dark {
+  background: radial-gradient(120% 120% at 50% 0%, #241f18 0%, #17150f 60%);
+  color: #efe7d6;
+}
+
+/* ---------- Typography ---------- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-deep));
+}
+
+.title-blackletter {
+  font-family: var(--font-blackletter);
+  font-weight: 400;
+  color: var(--taupe);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+}
+
+.title-serif {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.h1 {
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+}
+
+.h2 {
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+}
+
+.h3 {
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+}
+
+.lede {
+  font-size: clamp(1.02rem, 1.6vw, 1.2rem);
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.section--dark .lede {
+  color: #cfc4ad;
+}
+
+.gold-text {
+  background: linear-gradient(100deg, var(--gold-deep), var(--gold) 45%, #e9d3a6 70%, var(--gold-deep));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--gold {
+  background: linear-gradient(120deg, var(--gold-deep), var(--gold) 50%, #e6cd9d);
+  color: var(--ink);
+  box-shadow: 0 10px 26px rgba(192, 160, 108, 0.4);
+}
+
+.btn--gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 38px rgba(192, 160, 108, 0.5);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--gold-deep);
+}
+
+.btn--ghost:hover {
+  background: var(--gold-soft);
+  transform: translateY(-3px);
+}
+
+.btn--light {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f4ecd9;
+  border-color: rgba(233, 211, 166, 0.5);
+  backdrop-filter: blur(6px);
+}
+
+.btn--light:hover {
+  background: rgba(233, 211, 166, 0.16);
+  transform: translateY(-3px);
+}
+
+/* ---------- Reveal-on-scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal--left {
+  transform: translateX(-40px);
+}
+
+.reveal--right {
+  transform: translateX(40px);
+}
+
+.reveal--left.is-visible,
+.reveal--right.is-visible {
+  transform: none;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.14) translate(-1.5%, -1.5%);
+  }
+}
+
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.anim-fadeUp {
+  animation: fadeUp 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.anim-fadeIn {
+  animation: fadeIn 1.4s ease both;
+}
+
+/* ---------- Decorative flyer sunburst ---------- */
+.sunburst {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(217, 186, 140, 0.16) 0deg 6deg,
+    rgba(217, 186, 140, 0) 6deg 14deg
+  );
+  -webkit-mask-image: radial-gradient(closest-side, #000 0%, transparent 72%);
+  mask-image: radial-gradient(closest-side, #000 0%, transparent 72%);
+  animation: spinSlow 90s linear infinite;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 34px 30px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lift);
+  border-color: var(--gold);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+/* ---------- Stat / info chips ---------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--gold), var(--gold-deep));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 18px rgba(192, 160, 108, 0.35);
+}
+
+.chip--dark {
+  background: linear-gradient(120deg, #6e5b3c, #4c3f2a);
+}
+
+/* ---------- Divider ---------- */
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border: 0;
+  margin: 0;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
