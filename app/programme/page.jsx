@@ -3,64 +3,114 @@ import SectionHead from "../../components/SectionHead";
 
 const ORDER = [
   {
-    time: "09:15",
-    title: "Arrival & Seating of Guests",
-    body: "Ushers receive invited guests, faculty members, alumni and delegations. Background music by the departmental choir sets the tone.",
+    time: "09:00",
+    title: "Arrival & Registration",
+    body: "Ushers receive and register invited guests, faculty members, alumni and delegations, and direct them to their seats.",
   },
   {
-    time: "09:45",
-    title: "Procession of Officers-Elect",
-    body: "The Executives and Parliamentarians-elect process into the hall in ceremonial order, led by the Sergeant-at-Arms.",
+    time: "09:30",
+    title: "Arrival of Dignitaries",
+    body: "Distinguished guests and special invitees are received and ushered to the high table.",
   },
   {
     time: "10:00",
-    title: "Opening & Call to Order",
-    body: "The Master of Ceremonies opens the ceremony. The congregation stands for the National Anthem and the NUESA anthem.",
+    title: "Opening Processional",
+    body: "The Executives and Parliamentarians-elect process into the hall in ceremonial order to open the ceremony.",
+  },
+  {
+    time: "10:05",
+    title: "National Anthem",
+    body: "The congregation stands for the National Anthem.",
   },
   {
     time: "10:10",
-    title: "Opening Prayer & Welcome Address",
-    body: "A brief invocation, followed by the welcome address of the outgoing Faculty President on behalf of the transition committee.",
+    title: "University Anthem",
+    body: "The congregation stands for the University Anthem.",
   },
   {
-    time: "10:25",
-    title: "Reading of the Electoral Mandate",
-    body: "The Electoral Commission presents the certified results of the election and formally hands the mandate to the officers-elect.",
+    time: "10:15",
+    title: "Opening Prayer",
+    body: "A brief invocation to bless the ceremony and the new administration.",
+  },
+  {
+    time: "10:20",
+    title: "Welcome Address",
+    body: "A warm welcome to all guests, dignitaries and members of the faculty on behalf of the transition committee.",
+  },
+  {
+    time: "10:30",
+    title: "Introduction of Dignitaries",
+    body: "The dignitaries present are formally introduced to the congregation.",
   },
   {
     time: "10:40",
-    title: "Oath of Allegiance & Office",
+    title: "Presentation of the Newly Elected Executives/Parliamentarians",
+    body: "The elected Executives and Parliamentarians are presented to the congregation, ahead of the swearing-in.",
+  },
+  {
+    time: "10:55",
+    title: "Oath of Office / Swearing-In",
     body: "The swearing-in of the Faculty President-Elect, Comr. Idongesit Mark, followed by the collective oath of the Executives and Parliamentarians.",
   },
   {
-    time: "11:05",
-    title: "Investiture & Presentation of Symbols",
-    body: "The chain of office, staff and seal of the association are presented — the visible passing of authority to the new administration.",
+    time: "11:10",
+    title: "Official Inauguration of the Executives",
+    body: "The Executives are officially declared inaugurated, and the mandate passes to the new administration.",
   },
   {
-    time: "11:25",
-    title: "Charging & Goodwill Messages",
-    body: "The Faculty Adviser and distinguished guests charge the new officers; goodwill messages from sister associations and alumni follow.",
+    time: "11:20",
+    title: "Decoration of the Faculty President",
+    body: "The Student Union President decorates the Faculty President, the visible passing of authority.",
+  },
+  {
+    time: "11:30",
+    title: "Inaugural Address",
+    body: "The President, Faculty of Engineering, delivers the inaugural address, the first public statement of the Resurgence mandate.",
   },
   {
     time: "11:50",
-    title: "Acceptance & Inaugural Address",
-    body: "The inaugurated Faculty President delivers the inaugural address — the first public statement of the Resurgence mandate.",
+    title: "Presentation of the Administration's Vision & Agenda",
+    body: "The new administration lays out its vision and agenda for the tenure ahead.",
   },
   {
-    time: "12:15",
-    title: "Presentation of Executives & Photographs",
-    body: "The full council is presented to the congregation; official photographs of the administration are taken on stage.",
+    time: "12:10",
+    title: "Goodwill Messages",
+    body: "Goodwill messages from sister associations, alumni and well-wishers.",
   },
   {
-    time: "12:35",
-    title: "Vote of Thanks & Closing",
-    body: "The incoming Vice-President offers the vote of thanks. The ceremony closes with the NUESA anthem and recessional music.",
+    time: "12:25",
+    title: "Remarks by Faculty Representative / Dean",
+    body: "Remarks and charge to the new officers by the Faculty Representative or the Dean.",
   },
   {
-    time: "12:50",
-    title: "Reception & Refreshments",
-    body: "Guests and officers mingle at the reception. Light refreshments are served in the hall foyer.",
+    time: "12:40",
+    title: "Remarks by Distinguished Guest / Keynote Speaker",
+    body: "The distinguished guest or keynote speaker addresses the congregation.",
+  },
+  {
+    time: "1:00",
+    title: "Recognition of Special Guests",
+    body: "Special guests are acknowledged and recognised for their presence and support.",
+  },
+  {
+    time: "1:10",
+    title: "Vote of Thanks",
+    body: "Appreciation is extended to all guests, dignitaries, the faculty and everyone who made the ceremony possible.",
+  },
+  {
+    time: "1:20",
+    title: "Closing Prayer",
+    body: "The ceremony is brought to a close with prayer.",
+  },
+  {
+    time: "1:25",
+    title: "Group Photograph",
+    body: "Official group photographs of the administration with the dignitaries and guests.",
+  },
+  {
+    time: "1:40",
+    title: "Refreshments / Networking / Entertainment",
+    body: "Guests and officers mingle over refreshments, with networking and entertainment.",
   },
 ];
 
@@ -70,7 +120,6 @@ export default function Programme() {
       <section className="pagehero">
         <div className="container">
           <Reveal>
-
             <h1 className="title-blackletter pagehero__title">Programme of Events</h1>
             <p className="lede">
               The ceremony holds on the 2nd of October, 2026, commencing promptly at 10:00 AM (WAT) at the 250
@@ -85,9 +134,8 @@ export default function Programme() {
         <div className="container">
           <SectionHead
             align="center"
-
             title="Order of the Ceremony"
-            lede="Guests are kindly requested to be seated before the procession begins at 9:45 AM."
+            lede="Guests are kindly requested to be seated before the processional begins at 10:00 AM."
           />
           <div className="timeline">
             {ORDER.map((o, i) => (
