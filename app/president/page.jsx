@@ -18,7 +18,7 @@ export default function President() {
         <div className="container">
           <Reveal>
             {/* <span className="eyebrow">The Incoming Leadership</span> */}
-            <h1 className="title-blackletter pagehero__title">President-Elect</h1>
+            <h1 className="title-blackletter pagehero__title">President</h1>
             <p className="lede">
               More than a name. More than a candidate. A story of purpose, service, and the unwavering commitment to
               lead with integrity.
@@ -44,7 +44,7 @@ export default function President() {
 
             <Reveal variant="right" className="profile__bio">
               <h2 className="profile__name">Who is Idongesit Mark?</h2>
-              <p className="profile__role">Faculty President-Elect · NUESA, University of Uyo</p>
+              <p className="profile__role">Faculty president NUESA, University of Uyo</p>
               <p>
                 I am Idongesit Mark and this is the story of my journey; from humble beginnings, through the classrooms
                 and corridors of the University of Uyo, to a life dedicated to purposeful leadership, selfless service,
@@ -201,13 +201,13 @@ export default function President() {
           <SectionHead
 
             title="The Face of the Resurgence"
-            lede="Official portraits of the Faculty President-Elect, Comr. Idongesit Mark."
+            lede="Official portraits of the Faculty President, Comr. Idongesit Mark."
           />
           <div className="gallery">
             <Reveal className="gallery__item">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/img/president-1.jpg" alt="Comr. Idongesit Mark, seated official portrait" />
-              <span className="gallery__label">The President-Elect</span>
+              <span className="gallery__label">The President</span>
             </Reveal>
             <Reveal delay={100} className="gallery__item">
               {/* eslint-disable-next-line @next/next/no-img-element */}

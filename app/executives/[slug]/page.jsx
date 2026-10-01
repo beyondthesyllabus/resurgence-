@@ -52,17 +52,24 @@ export default function ExecutivePage({ params }) {
             <Reveal variant="right" className="profile__bio">
               <h2 className="profile__name">{e.name || "Office of the " + e.office}</h2>
               <p className="profile__role">{e.office} · NUESA, University of Uyo</p>
+              {e.reg && (
+                <p className="profile__role">
+                  Reg. No {e.reg} · {e.dept} Department
+                </p>
+              )}
               <p>{e.mandate}</p>
               <p>
                 As part of the Resurgence executive council, the {e.office} is inaugurated on the 2nd of October, 2026
                 at the 250 Capacity TETFUND Hall, Faculty of Engineering, University of Uyo — joining colleagues sworn
                 to a single promise: to leave the faculty stronger than they met it.
               </p>
-              <p>
-                The office works under the leadership of the Faculty President, Comr. Idongesit Mark, and reports to
-                the student body through the association&apos;s parliament — carrying the portfolio from mandate to
-                measurable outcome.
-              </p>
+              {e.slug !== "president" && (
+                <p>
+                  The office works under the leadership of the Faculty President, Comr. Idongesit Mark, and reports to
+                  the student body through the association&apos;s parliament — carrying the portfolio from mandate to
+                  measurable outcome.
+                </p>
+              )}
               <div style={{ marginTop: 26, display: "flex", gap: 14, flexWrap: "wrap" }}>
                 <Link href="/executives" className="btn btn--ghost">
                   All Executives

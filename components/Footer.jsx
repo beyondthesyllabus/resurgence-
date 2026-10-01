@@ -25,7 +25,7 @@ export default function Footer() {
           <Link href="/about">The Resurgence</Link>
           <Link href="/executives">The Executives</Link>
           <Link href="/programme">Programme of Events</Link>
-          <Link href="/president">President-Elect</Link>
+          <Link href="/president">President</Link>
           <Link href="/gallery">Gallery</Link>
         </div>
 

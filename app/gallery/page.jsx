@@ -4,7 +4,7 @@ import { EXECUTIVES } from "../../lib/executives";
 
 const OFFICIAL = [
   { src: "/img/flyer.jpg", label: "Official Flyer", wide: true },
-  { src: "/img/president-1.jpg", label: "The President-Elect", wide: false },
+  { src: "/img/president-1.jpg", label: "The President", wide: false },
   { src: "/img/president-2.jpg", label: "Ceremonial Portrait", wide: false },
   { src: "/img/president-3.jpg", label: "The Mastermind", wide: false },
 ];
@@ -57,7 +57,7 @@ export default function Gallery() {
             lede="The executives to be inaugurated, the new leadership of the Faculty of Engineering."
           />
           <div className="gallery">
-            {EXECUTIVES.map((e, i) => (
+            {EXECUTIVES.filter((e) => e.slug !== "president").map((e, i) => (
               <Reveal key={e.slug} delay={Math.min(i * 60, 280)} className="gallery__item">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={e.img} alt={e.name || e.office} loading="lazy" />

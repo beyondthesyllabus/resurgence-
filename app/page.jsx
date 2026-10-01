@@ -96,7 +96,7 @@ export default function Home() {
                   View Programme
                 </Link>
                 <Link href="/president" className="btn btn--ghost">
-                  Meet the President-Elect
+                  Meet the President
                 </Link>
               </div>
               <Countdown />
@@ -111,7 +111,7 @@ export default function Home() {
             <div className="hero__portraitring" aria-hidden="true" />
             <div className="hero__badge">
               <strong>Comr. Idongesit Mark</strong>
-              <span>Faculty President-Elect · NUESA, UNIUYO</span>
+              <span>Faculty President · NUESA, UNIUYO</span>
             </div>
           </Reveal>
         </div>
@@ -218,7 +218,7 @@ export default function Home() {
               We do not inherit this faculty; we borrow it from every engineer who will walk these corridors after us.
               The Resurgence is our promise to return it stronger.
             </blockquote>
-            <cite>Comr. Idongesit Mark · Faculty President-Elect</cite>
+            <cite>Comr. Idongesit Mark · Faculty President</cite>
           </Reveal>
         </div>
       </section>
