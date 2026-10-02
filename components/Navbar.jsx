@@ -11,6 +11,7 @@ const LINKS = [
   { href: "/programme", label: "Programme" },
   { href: "/president", label: "President" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/inaugural", label: "Inaugural Speech" },
 ];
 
 export default function Navbar() {
